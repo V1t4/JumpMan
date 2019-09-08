@@ -3,7 +3,7 @@
 #include "Movil.h"
 #include "Personaje.h"
 #include "Global.h"
-#include <SFML/System.hpp>
+#include "SFML/System.hpp"
 
 class Horizontal : public Movil {
 public:

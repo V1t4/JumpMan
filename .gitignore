@@ -2,3 +2,6 @@ bin
 jumpman
 lib
 temp
+remember
+src/jumpMan.zpr
+src/Debug_Linux/

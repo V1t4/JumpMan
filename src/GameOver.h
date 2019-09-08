@@ -1,8 +1,8 @@
 #ifndef GAMEOVER_H
 #define GAMEOVER_H
 #include "Escena.h"
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
+#include "SFML/Graphics.hpp"
+#include "SFML/Window.hpp"
 #include "Global.h"
 #include "Menu.h"
 #include "Nivel.h"

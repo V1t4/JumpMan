@@ -1,7 +1,7 @@
 #ifndef PUERTA_H
 #define PUERTA_H
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
+#include "SFML/System.hpp"
+#include "SFML/Graphics.hpp"
 
 class Puerta {
 public:

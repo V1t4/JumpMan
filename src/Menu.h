@@ -1,10 +1,11 @@
 #ifndef MENU_H
 #define MENU_H
 #include "Escena.h"
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
+#include "SFML/Graphics.hpp"
+#include "SFML/Window.hpp"
 #include "Global.h"
 #include <string>
+#include <vector>
 #include "Nivel.h"
 #include "Creditos.h"
 #include "VerTiempos.h"
@@ -18,10 +19,11 @@ public:
 private:
 	sf::Sprite margen;
 	sf::Text titulo;
-	sf::Text presioneTecla1;
-	sf::Text presioneTecla2;
-	sf::Text presioneTecla3;
-	sf::Text presioneTecla4;
+//	sf::Text presioneTecla1;
+//	sf::Text presioneTecla2;
+//	sf::Text presioneTecla3;
+//	sf::Text presioneTecla4;
+	
 	bool SoltoTecla1;
 	bool SoltoTecla2;
 };

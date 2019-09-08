@@ -1,8 +1,8 @@
 #ifndef Nivel_H
 #define Nivel_H
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
+#include "SFML/Graphics.hpp"
+#include "SFML/Window.hpp"
+#include "SFML/System.hpp"
 #include <vector>
 #include <cstdlib>
 #include <fstream>

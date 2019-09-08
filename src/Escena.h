@@ -1,8 +1,8 @@
 #ifndef ESCENA_H
 #define ESCENA_H
 #include "Juego.h"
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
+#include "SFML/Window.hpp"
+#include "SFML/Graphics.hpp"
 
 class Juego;
 

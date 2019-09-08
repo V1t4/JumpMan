@@ -1,7 +1,7 @@
 #ifndef LLAVE_H
 #define LLAVE_H
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
+#include "SFML/System.hpp"
+#include "SFML/Graphics.hpp"
 #include "Personaje.h"
 
 class Llave {

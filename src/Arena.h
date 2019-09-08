@@ -2,7 +2,7 @@
 #define ARENA_H
 #include "Suelo.h"
 #include "Global.h"
-#include <SFML/System.hpp>
+#include "SFML/System.hpp"
 
 class Arena : public Suelo {
 public:

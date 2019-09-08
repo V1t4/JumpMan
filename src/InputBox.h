@@ -1,6 +1,6 @@
 #ifndef INPUTTEXT_H
 #define INPUTTEXT_H
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 #include <string>
 
 class InputText:public sf::Text {

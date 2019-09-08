@@ -1,7 +1,7 @@
 #ifndef ENEMIGO_H
 #define ENEMIGO_H
 #include "Global.h"
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 
 class Enemigo {
 public:

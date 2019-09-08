@@ -2,8 +2,8 @@ TF = temp/
 SFML = /home/vita/Programacion/SFML-2.5.1
 
 jumpman: Arena.o Escena.o Hielo.o Llave.o Nivel.o Puerta.o Final.o Horizontal.o main.o Pasto.o Suelo.o Creditos.o GameOver.o Instrucciones.o Menu.o Personaje.o Vertical.o Enemigo.o Global.o Juego.o Movil.o Piedra.o VerTiempos.o
-	g++ -o ./bin/jumpman $(TF)Arena.o $(TF)Escena.o $(TF)Hielo.o $(TF)Llave.o $(TF)Nivel.o $(TF)Puerta.o $(TF)Final.o $(TF)Horizontal.o $(TF)main.o $(TF)Pasto.o $(TF)Suelo.o $(TF)Creditos.o $(TF)GameOver.o $(TF)Instrucciones.o $(TF)Menu.o $(TF)Personaje.o $(TF)Vertical.o $(TF)Enemigo.o $(TF)Global.o $(TF)Juego.o $(TF)Movil.o $(TF)Piedra.o $(TF)VerTiempos.o -Llib -lsfml-graphics -lsfml-window -lsfml-system
-	
+	g++ -o ./jumpman $(TF)Arena.o $(TF)Escena.o $(TF)Hielo.o $(TF)Llave.o $(TF)Nivel.o $(TF)Puerta.o $(TF)Final.o $(TF)Horizontal.o $(TF)main.o $(TF)Pasto.o $(TF)Suelo.o $(TF)Creditos.o $(TF)GameOver.o $(TF)Instrucciones.o $(TF)Menu.o $(TF)Personaje.o $(TF)Vertical.o $(TF)Enemigo.o $(TF)Global.o $(TF)Juego.o $(TF)Movil.o $(TF)Piedra.o $(TF)VerTiempos.o -Llib -lsfml-graphics -lsfml-window -lsfml-system
+	export LD_LIBRARY_PATH=lib
 
 Arena.o: src/Arena.h src/Arena.cpp
 	g++ -Wall -g -c src/Arena.cpp -o $(TF)Arena.o -I$(SFML)/include

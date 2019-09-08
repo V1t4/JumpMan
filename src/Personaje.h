@@ -1,10 +1,10 @@
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 #include "Vertical.h"
 #include <vector>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
+#include "SFML/System.hpp"
+#include "SFML/Window.hpp"
 #include <iostream>
 #include "Global.h"
 

@@ -14,6 +14,7 @@ Juego::Juego() {
 	ventana.setFramerateLimit(60);//Recomendado para que se actualice 60 veces por segundo
 	
 	Global::CargarTexturas();//Se llama al metodo que cargue las texturas y fuentes una sola vez
+	Global::CargarTextos("spanish");
 	
 	escActual=new Menu();//El juego arranca mostrando el menu
 	escSiguiente=nullptr;//Mientras la siguiente sea nullptr, seguiremos en la actual. Si no, se cambia de escena

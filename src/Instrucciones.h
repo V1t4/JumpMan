@@ -1,9 +1,9 @@
 #ifndef INSTRUCCIONES_H
 #define INSTRUCCIONES_H
 #include "Escena.h"
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 #include "Global.h"
-#include <SFML/Window.hpp>
+#include "SFML/Window.hpp"
 #include "Nivel.h"
 #include "Menu.h"
 
@@ -13,10 +13,6 @@ public:
 	void actualizar (Juego & j);
 	void dibujar (sf::RenderWindow & ventana);
 private:
-	sf::Text titulo;
-	sf::Text presioneTecla1;
-	sf::Text presioneTecla2;
-	
 	sf::Sprite margen;
 };
 

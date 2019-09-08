@@ -2,7 +2,7 @@
 #define VERTIEMPOS_H
 #include "Escena.h"
 #include "Global.h"
-#include <SFML/Window.hpp>
+#include "SFML/Window.hpp"
 #include <fstream>
 #include <sstream>
 #include <iostream>

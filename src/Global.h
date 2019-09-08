@@ -1,10 +1,20 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 #include <string>
-#include <SFML/Graphics.hpp>
+#include <sstream>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include "SFML/Graphics.hpp"
 
 class Texture;
 class Font;
+
+//struct linea{
+//	std::string texto;
+//	unsigned int tamanio;
+//	float x,y;
+//};
 
 class Global{
 public:
@@ -33,7 +43,16 @@ public:
 	
 	static sf::Font fuente;
 	
+	static std::vector<sf::Text> txt_menu;
+	static std::vector<sf::Text> txt_instrucciones;
+	static std::vector<sf::Text> txt_verTiempos;
+	static std::vector<sf::Text> txt_creditos;
+	static std::vector<sf::Text> txt_final;
+	static std::vector<sf::Text> txt_gameOver;
+
 	static void CargarTexturas();
+	static void CargarTextos(std::string idioma);
+	static std::vector<sf::Text> LeerArchivo(std::string archivo);
 private:
 };
 

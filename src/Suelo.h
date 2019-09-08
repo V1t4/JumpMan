@@ -1,6 +1,6 @@
 #ifndef SUELO_H
 #define SUELO_H
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 
 class Suelo {
 public:

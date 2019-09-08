@@ -1,8 +1,8 @@
 #ifndef FINAL_H
 #define FINAL_H
 #include "Escena.h"
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
+#include "SFML/Graphics.hpp"
+#include "SFML/Window.hpp"
 #include "Global.h"
 #include <fstream>
 #include <sstream>

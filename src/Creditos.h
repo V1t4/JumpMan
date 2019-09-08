@@ -1,9 +1,9 @@
 #ifndef CREDITOS_H
 #define CREDITOS_H
 #include "Escena.h"
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 #include "Global.h"
-#include <SFML/Window.hpp>
+#include "SFML/Window.hpp"
 #include "Menu.h"
 
 class Creditos : public Escena {
