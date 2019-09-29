@@ -10,12 +10,6 @@
 class Texture;
 class Font;
 
-//struct linea{
-//	std::string texto;
-//	unsigned int tamanio;
-//	float x,y;
-//};
-
 class Global{
 public:
 	Global();
@@ -47,8 +41,9 @@ public:
 	static std::vector<sf::Text> txt_instrucciones;
 	static std::vector<sf::Text> txt_verTiempos;
 	static std::vector<sf::Text> txt_creditos;
-	static std::vector<sf::Text> txt_final;
+	static std::vector<std::string> txt_nivel;
 	static std::vector<sf::Text> txt_gameOver;
+	static std::vector<sf::Text> txt_final;
 
 	static void CargarTexturas();
 	static void CargarTextos(std::string idioma);

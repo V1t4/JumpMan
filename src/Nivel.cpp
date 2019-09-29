@@ -16,7 +16,7 @@ Nivel::Nivel() {
 	
 	//Cargo el texto que se mostrara en la esquina superior izquierda
 	texto.setFont(Global::fuente);
-	texto.setColor(sf::Color(255,91,0));
+	texto.setFillColor(sf::Color(255,91,0));
 	texto.setCharacterSize(40);
 }
 
@@ -172,8 +172,9 @@ void Nivel::actualizarTexto (float tiempo) {
 	
 	//Se actualiza el texto para que diga el tiempo, las llaves y los niveles
 	stringstream s;
-	s<<"Nivel: "<<Global::nivActual<<"/"<<Global::cantNiv<<"\nLlaves: "<<p.llavesActuales()<<"/"
-		<<Ll.size()<<"\nTiempo: "<<setprecision(4)<<tiempo<<" s";
+	
+	s<<Global::txt_nivel[0]<<": "<<Global::nivActual<<"/"<<Global::cantNiv<<"\n"<<Global::txt_nivel[1]<<": "<<p.llavesActuales()
+		<<"/"<<Ll.size()<<"\n"<<Global::txt_nivel[2]<<": "<<setprecision(4)<<tiempo<<" s";
 	texto.setString(s.str());
 }
 

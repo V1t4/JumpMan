@@ -20,13 +20,7 @@ public:
 	void actualizar (Juego &j) override;
 	void procesarEvento (const sf::Event & evento) override;
 private:
-	sf::Text titulo1;
-	sf::Text titulo2;
-	sf::Text titulo3;
-	sf::Text titulo4;
-	sf::Text presioneTecla1;
-	sf::Text presioneTecla2;
-	sf::Text presioneTecla3;
+	sf::Text titulo;
 	InputText nombre;
 	sf::Sprite margen;
 	

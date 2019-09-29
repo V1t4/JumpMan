@@ -2,51 +2,22 @@
 
 Final::Final() {
 	//Se inicializan los textos
-	titulo1.setFont(Global::fuente);
-	titulo1.setColor(sf::Color::Yellow);
-	titulo1.setString("FELICITACIONES!!!");
-	titulo1.setCharacterSize(100);
-	titulo1.setPosition(sf::Vector2f((Global::anchoVentana-titulo1.getLocalBounds().width)/2.0, 50));
-	titulo2.setFont(Global::fuente);
-	titulo2.setColor(sf::Color::Yellow);
-	titulo2.setString("Ha ganado el juego!!!");
-	titulo2.setCharacterSize(80);
-	titulo2.setPosition(sf::Vector2f((Global::anchoVentana-titulo2.getLocalBounds().width)/2.0, 150));
-	titulo3.setFont(Global::fuente);
-	titulo3.setColor(sf::Color::White);
-	stringstream s;//Esto es para concatenar el tiempo y el nombre del jugador en una misma frase
-	s<<"Su tiempo es "<<setprecision(4)<<Global::tiempoJugador;
-	titulo3.setString(s.str());
-	titulo3.setCharacterSize(50);
-	titulo3.setPosition(sf::Vector2f((Global::anchoVentana-titulo3.getLocalBounds().width)/2.0, 250));
-	titulo4.setString("Por favor ingrese nombre (maximo 25 letras): ");
-	titulo4.setFont(Global::fuente);
-	titulo4.setColor(sf::Color::Red);
-	titulo4.setCharacterSize(50);
-	titulo4.setPosition(75, 360);
+	titulo.setFont(Global::fuente);
+	titulo.setFillColor(sf::Color::White);
+	stringstream s;
+	s<<setprecision(4)<<Global::tiempoJugador<<" s";
+	titulo.setString(s.str());
+	titulo.setCharacterSize(50);
+	titulo.setPosition(sf::Vector2f(Global::txt_final[2].getLocalBounds().width + 
+									Global::txt_final[2].getPosition().x + 20, 250));
 	
 	nombre.setFont(Global::fuente);
-	nombre.setColor(sf::Color::White);
+	nombre.setFillColor(sf::Color::White);
 	nombre.setCharacterSize(50);
-	nombre.setPosition(sf::Vector2f(80+titulo4.getGlobalBounds().width, 360));
+	nombre.setPosition(sf::Vector2f(20 + Global::txt_final[3].getGlobalBounds().width
+									+ Global::txt_final[3].getPosition().x, 360));
 	nombre.setMaxChars(25);
 	nombre.setSingleWord(true);
-	
-	presioneTecla1.setFont(Global::fuente);
-	presioneTecla1.setColor(sf::Color::White);
-	presioneTecla1.setString("Presione ENTER para volver a jugar");
-	presioneTecla1.setCharacterSize(40);
-	presioneTecla1.setPosition(sf::Vector2f((Global::anchoVentana-presioneTecla1.getLocalBounds().width)/2.0, 500));
-	presioneTecla2.setFont(Global::fuente);
-	presioneTecla2.setColor(sf::Color::White);
-	presioneTecla2.setString("Presione TAB para ver los mejores tiempos");
-	presioneTecla2.setCharacterSize(40);
-	presioneTecla2.setPosition(sf::Vector2f(Global::anchoVentana-presioneTecla2.getLocalBounds().width-60, 575));
-	presioneTecla3.setFont(Global::fuente);
-	presioneTecla3.setColor(sf::Color::White);
-	presioneTecla3.setString("Presione SPACE para volver al menu");
-	presioneTecla3.setCharacterSize(40);
-	presioneTecla3.setPosition(sf::Vector2f(75, 575));
 	
 	//Se agrega un margen
 	margen.setTexture(Global::t_margen);
@@ -55,15 +26,12 @@ Final::Final() {
 void Final::dibujar (sf::RenderWindow & ventana) {
 	ventana.clear(sf::Color::Green);
 	ventana.draw(margen);
-	ventana.draw(titulo1);
-	ventana.draw(titulo2);
-	ventana.draw(titulo3);
-	ventana.draw(titulo4);
+	ventana.draw(titulo);
 	ventana.draw(nombre);
-	ventana.draw(presioneTecla1);
-	ventana.draw(presioneTecla2);
-	ventana.draw(presioneTecla3);
-	ventana.display();
+
+	for (sf::Text linea : Global::txt_final)
+		ventana.draw(linea);
+
 }
 
 void Final::actualizar (Juego &j) {
@@ -92,6 +60,7 @@ void Final::actualizar (Juego &j) {
 		
 		j.cambiarEscena(new VerTiempos());
 	}
+	
 }
 
 

@@ -175,7 +175,7 @@ sf::Vector2f Personaje::seMueveSuelo (std::vector<Suelo*> & Su) {//De manera sim
 	return sf::Vector2f(0,0);
 }
 
-int Personaje::llavesActuales ( ) {//Retorna cuantas llaves tiene el jugador
+unsigned int Personaje::llavesActuales ( ) {//Retorna cuantas llaves tiene el jugador
 	return nroLlaves;
 }
 

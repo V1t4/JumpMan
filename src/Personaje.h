@@ -17,7 +17,7 @@ public:
 	void dibujar(sf::RenderWindow &ventana);
 	void actualizar(std::vector <Suelo*> &Su);
 	sf::FloatRect posicionPersonaje();
-	int llavesActuales();
+	unsigned int llavesActuales();
 	void tomarLlave();
 private:
 	//Textura y sprite del personaje
@@ -46,6 +46,6 @@ private:
 	sf::Vector2f seMueveSuelo(std::vector <Suelo*> &Su);
 	
 	//Cuenta de las llaves poseidas
-	int nroLlaves;
+	unsigned int nroLlaves;
 };
 #endif

@@ -12,10 +12,6 @@ public:
 	void actualizar (Juego &j) override;
 	void dibujar (sf::RenderWindow & ventana) override;
 private:
-	sf::Text titulo1;
-	sf::Text titulo2;
-	sf::Text presioneTecla;
-	
 	sf::Sprite margen;
 };
 

@@ -2,7 +2,7 @@
 
 Menu::Menu() {
 	titulo.setFont(Global::fuente);
-	titulo.setColor(sf::Color::White);
+	titulo.setFillColor(sf::Color::White);
 	titulo.setString("JumpMan!");
 	titulo.setCharacterSize(200);
 	titulo.setPosition(sf::Vector2f((Global::anchoVentana-titulo.getLocalBounds().width)/2.0, 20));

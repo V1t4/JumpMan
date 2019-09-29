@@ -1,26 +1,11 @@
 #include "VerTiempos.h"
 
 VerTiempos::VerTiempos() {
-	//Se inicializan los textos
-	titulo.setFont(Global::fuente);
-	titulo.setColor(sf::Color::White);
-	titulo.setString("Mejores tiempos");
-	titulo.setCharacterSize(50);
-	titulo.setPosition(sf::Vector2f((Global::anchoVentana-titulo.getLocalBounds().width)/2.0, 50));
+	
 	tablaTiempos.setFont(Global::fuente);
-	tablaTiempos.setColor(sf::Color::White);
+	tablaTiempos.setFillColor(sf::Color::White);
 	tablaTiempos.setCharacterSize(40);
 	cargarTiempos();//Se cargan los tiempos desde el archivo
-	presioneTecla1.setFont(Global::fuente);
-	presioneTecla1.setColor(sf::Color::White);
-	presioneTecla1.setString("Presione ENTER para volver al menu");
-	presioneTecla1.setCharacterSize(25);
-	presioneTecla1.setPosition(sf::Vector2f(60, 600));
-	presioneTecla2.setFont(Global::fuente);
-	presioneTecla2.setColor(sf::Color::White);
-	presioneTecla2.setString("Presione DELETE para borrar mejores tiempos");
-	presioneTecla2.setCharacterSize(25);
-	presioneTecla2.setPosition(sf::Vector2f((Global::anchoVentana-presioneTecla2.getLocalBounds().width-60), 600));
 	
 	//Se agrega un margen
 	margen.setTexture(Global::t_margen);
@@ -44,10 +29,10 @@ void VerTiempos::actualizar (Juego & j) {
 
 void VerTiempos::dibujar (sf::RenderWindow & ventana) {
 	ventana.clear(sf::Color::Black);
-	ventana.draw(titulo);
 	ventana.draw(margen);
-	ventana.draw(presioneTecla1);
-	ventana.draw(presioneTecla2);
+	for (sf::Text linea : Global::txt_verTiempos)
+		ventana.draw(linea);
+	
 	ventana.draw(tablaTiempos);
 }
 

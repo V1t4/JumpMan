@@ -36,8 +36,9 @@ std::vector<sf::Text> Global::txt_menu;
 std::vector<sf::Text> Global::txt_instrucciones;
 std::vector<sf::Text> Global::txt_verTiempos;
 std::vector<sf::Text> Global::txt_creditos;
-std::vector<sf::Text> Global::txt_final;
+std::vector<std::string> Global::txt_nivel;
 std::vector<sf::Text> Global::txt_gameOver;
+std::vector<sf::Text> Global::txt_final;
 
 
 void Global::CargarTexturas ( ) {
@@ -58,9 +59,8 @@ void Global::CargarTexturas ( ) {
 }
 
 void Global::CargarTextos(std::string idioma){	
-	std::ifstream archi;
-	std::string str;
-	std::stringstream archivoMenu, archivoInst;
+	
+	std::stringstream archivoMenu,archivoInst,archivoVerT,archivoCred,archivoNiv,archivoGamO,archivoFin;
 	
 	//Cargando menu
 	archivoMenu << "assets/texts/" << idioma << "/Menu";
@@ -70,6 +70,31 @@ void Global::CargarTextos(std::string idioma){
 	archivoInst << "assets/texts/" << idioma << "/Instrucciones";
 	txt_instrucciones = LeerArchivo(archivoInst.str());
 	
+	//Cargando verTiempos
+	archivoVerT << "assets/texts/" << idioma << "/VerTiempos";
+	txt_verTiempos = LeerArchivo(archivoVerT.str());
+	
+	//Cargando creditos
+	archivoCred << "assets/texts/" << idioma << "/Creditos";
+	txt_creditos = LeerArchivo(archivoCred.str());
+	
+	//Cargando nivel. El nivel tiene un formato propio, solamente se leen las palabras a escribir.
+	archivoNiv << "assets/texts/" << idioma << "/Nivel";
+	std::string linea;
+	std::ifstream archi;
+	archi.open(archivoNiv.str());
+	while(std::getline(archi, linea)) txt_nivel.push_back(linea);
+	archi.close();
+	
+	//Cargando gameOver
+	archivoGamO << "assets/texts/" << idioma << "/GameOver";
+	txt_gameOver = LeerArchivo(archivoGamO.str());
+	
+	//Cargando final
+	archivoFin << "assets/texts/" << idioma << "/Final";
+	std::cout<<archivoFin.str();
+	txt_final = LeerArchivo(archivoFin.str());
+	txt_final[0].setFillColor(sf::Color::Yellow);
 }
 
 std::vector<sf::Text> Global::LeerArchivo (std::string archivo) {
@@ -86,7 +111,7 @@ std::vector<sf::Text> Global::LeerArchivo (std::string archivo) {
 		  archi>>ypos &&
 		  archi.ignore()){
 		aux.setFont(Global::fuente);
-		aux.setColor(sf::Color::White);
+		aux.setFillColor(sf::Color::White);
 		aux.setString(linea);
 		aux.setCharacterSize(tamanio);
 		aux.setPosition(sf::Vector2f(xpos,ypos));
