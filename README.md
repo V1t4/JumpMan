@@ -9,6 +9,6 @@ El proyecto presentado difiere ligeramente de lo que se encuentra en este reposi
 
 This project was made as final project for Objects Oriented Programming subject.
 
-It's a platform game called JumpMan like the first name of the actual character Mario from Mario Bros. The idea was to choose a name for the character and call the game with the same name. But that didn't happen and now it's called JumpMan.
+It's a platform game called JumpMan like the first name of the character Mario from Mario Bros. The idea was to choose a name for the character and call the game with the same name. But that didn't happen and now it's called JumpMan.
 
 This project is a little different from the presented in OOP because, once it is approved, it became a test subject for my personal practices. Now I'm using it to learn how to use git and github so I don't want to improve it.
